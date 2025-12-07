@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="10/20/2025 19:24:25" ReportInfo.Modified="10/25/2025 19:53:25" ReportInfo.CreatorVersion="2026.1.0.0">
+  <Dictionary>
+    <BusinessObjectDataSource Name="Matches" ReferenceName="Matches" DataType="System.Int32" Enabled="true">
+      <Column Name="HomeTeam" DataType="System.Int32">
+        <Column Name="Id" DataType="System.Guid"/>
+        <Column Name="Score" DataType="System.Int32"/>
+        <Column Name="Logo" DataType="System.Byte[]" BindableControl="Picture"/>
+      </Column>
+      <Column Name="AwayTeam" DataType="System.Int32">
+        <Column Name="Id" DataType="System.Guid"/>
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="Score" DataType="System.Int32"/>
+        <Column Name="Logo" DataType="System.Byte[]" BindableControl="Picture"/>
+      </Column>
+      <Column Name="MatchDate" DataType="System.DateTime"/>
+      <BusinessObjectDataSource Name="IntegerMetrics" DataType="System.Int32" Enabled="true">
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="Value" DataType="System.Object"/>
+      </BusinessObjectDataSource>
+      <BusinessObjectDataSource Name="DecimalMetrics" DataType="System.Int32" Enabled="true">
+        <Column Name="Name" DataType="System.String"/>
+        <Column Name="Value" DataType="System.Object"/>
+      </BusinessObjectDataSource>
+    </BusinessObjectDataSource>
+    <Parameter Name="MyParameter" DataType="System.String" AsString=""/>
+  </Dictionary>
+  <ReportPage Name="Page1" Landscape="true" PaperWidth="297" PaperHeight="210" RawPaperSize="9" Watermark.Font="Arial, 60pt">
+    <PageHeaderBand Name="PageHeader1" Width="1047.06" Height="47.25">
+      <PictureObject Name="Picture1" Left="28.35" Top="9.45" Width="113.4" Height="28.35" Image="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"/>
+      <LineObject Name="Line5" Left="28.35" Top="42.25" Width="1001.7" Border.Color="0, 192, 0" Border.Width="2" Diagonal="true"/>
+      <TextObject Name="Text10" Left="784.35" Top="18.9" Width="236.25" Height="18.9" Text="[Date]" Format="Date" Format.Format="D" HorzAlign="Right" Font="Arial, 10pt"/>
+      <TextObject Name="Text2" Left="481.95" Width="94.5" Height="18.9" Text="Date" Font="Arial, 10pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="49.92" Width="1047.06" Height="283.5" DataSource="Matches">
+      <TextObject Name="Text3" Left="276.05" Top="75.6" Width="481.95" Height="18.9" Text="INFORME ESTADÍSTICO POST-PARTIDO EQUIPOS" Font="Arial, 14.25pt, style=Bold"/>
+      <LineObject Name="Line3" Left="283.5" Top="103.95" Width="463.05" Border.Width="3" Diagonal="true"/>
+      <TextObject Name="matchResultText" Left="510.3" Top="122.85" Width="37.8" Height="18.9" Text="[Matches.HomeTeam.Score] - [Matches.AwayTeam.Score]" Font="Arial, 10pt"/>
+      <ShapeObject Name="Shape1" Left="491.4" Top="113.4" Width="75.6" Height="37.8" Border.Color="Silver" Border.Width="2" Shape="RoundRectangle" Curve="3"/>
+      <LineObject Name="Line4" Left="283.5" Top="179.55" Width="463.05" Border.Width="3" Diagonal="true"/>
+      <TextObject Name="Text7" Left="340.2" Top="122.85" Width="94.5" Height="18.9" Text="[Matches.HomeTeam.Name]" HorzAlign="Right" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text8" Left="623.7" Top="122.85" Width="113.4" Height="18.9" Text="[Matches.AwayTeam.Name]" Font="Arial, 10pt, style=Bold"/>
+      <PictureObject Name="Picture3" Left="576.45" Top="113.4" Width="37.8" Height="37.8" DataColumn="Matches.AwayTeam.Logo"/>
+      <PictureObject Name="Picture4" Left="444.15" Top="113.4" Width="37.8" Height="37.8" DataColumn="Matches.HomeTeam.Logo"/>
+      <TextObject Name="Text11" Left="387.45" Top="160.65" Width="283.5" Height="18.9" Text="[Matches.MatchDate]" HorzAlign="Center" Font="Arial, 10pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="336.08" Width="1047.06" Height="18.9"/>
+  </ReportPage>
+  <ReportPage Name="Page2" Landscape="true" PaperWidth="297" PaperHeight="210" RawPaperSize="9" Watermark.Font="Arial, 60pt">
+    <PageHeaderBand Name="PageHeader2" Width="1047.06" Height="62.7">
+      <PictureObject Name="Picture2" Left="9.45" Top="3" Width="113.4" Height="28.35" ImageFormat="Png" Image="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"/>
+      <TextObject Name="Text1" Left="132.3" Top="11.45" Width="207.9" Height="18.9" Text="INFORME POST-PARTIDO-EQUIPOS" Font="Arial, 8.25pt"/>
+      <LineObject Name="Line2" Left="387.45" Top="31.35" Height="-26.46" Border.Color="Silver" Border.Width="2"/>
+      <TextObject Name="Text12" Left="9.45" Top="34.35" Width="1030.05" Height="28.35" Fill.Color="ForestGreen" Text="CRONOGRAMA DE EVENTOS Y ALINEACIONES" HorzAlign="Center" VertAlign="Center" Font="Arial Narrow, 9.75pt, style=Bold" TextFill.Color="White"/>
+      <TextObject Name="Text13" Left="396.9" Top="3" Width="283.5" Height="18.9" Text="ATLÉTICO DE MADRID 1 - 0 CA OSASUNA" Font="Arial, 10pt"/>
+      <TextObject Name="Text14" Left="396.9" Top="21.9" Width="311.85" Height="9.45" Text="LALIGA EA SPORTS TEMPORADA 2025 - 2026 JORNADA: 9" Font="Calibri, 8.25pt" TextFill.Color="DimGray"/>
+      <TextObject Name="Text4" Left="689.85" Width="94.5" Height="18.9" Text="Name" Font="Arial, 10pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data2" Top="66.7" Width="1047.06" Height="330.75" DataSource="Matches">
+      <ShapeObject Name="Shape2" Left="9.45" Width="1030.05" Height="18.9" Border.Color="Transparent" Fill.Color="Gainsboro"/>
+      <ShapeObject Name="Shape3" Left="9.45" Top="18.9" Width="1030.05" Height="37.8" Border.Color="Transparent" Fill.Color="WhiteSmoke"/>
+      <TextObject Name="Text15" Left="9.45" Top="56.7" Width="1030.05" Height="18.9" Fill.Color="Gainsboro" Text="DINÁMICA-ESTADO DEL MARCADOR Y CRONOGRAMA DE EVENTOS" HorzAlign="Center" VertAlign="Center" Font="Arial Narrow, 8.25pt"/>
+      <ShapeObject Name="Shape4" Left="9.45" Top="76.6" Width="1030.05" Height="37.8" Border.Color="Transparent" Fill.Color="WhiteSmoke"/>
+      <TextObject Name="Text16" Left="9.45" Top="28.35" Width="179.55" Height="18.9" Text="Entrenador: Diego Simeone" Font="Arial, 10pt"/>
+      <TextObject Name="Text18" Left="255.15" Top="28.35" Width="113.4" Height="18.9" Text="[Matches.HomeTeam.Name]" Font="Arial, 10pt"/>
+      <PictureObject Name="Picture5" Left="218.35" Top="21.9" Width="28.35" Height="28.35" DataColumn="Matches.HomeTeam.Logo"/>
+      <TextObject Name="Text19" Left="510.3" Top="28.35" Width="37.8" Height="18.9" Text="[Matches.HomeTeam.Score] - [Matches.AwayTeam.Score]" Font="Arial, 10pt"/>
+      <PictureObject Name="Picture6" Left="654.05" Top="22.9" Width="28.35" Height="28.35" DataColumn="Matches.AwayTeam.Logo"/>
+      <TextObject Name="Text20" Left="689.85" Top="26.9" Width="94.5" Height="18.9" Text="[Matches.AwayTeam.Name]" Font="Arial, 10pt"/>
+      <TextObject Name="Text21" Left="850.5" Top="28.35" Width="179.55" Height="18.9" Text="Entrenador: Diego Simeone" HorzAlign="Right" Font="Arial, 10pt"/>
+      <PictureObject Name="Picture7" Left="9.45" Top="113.4" Width="510.3" Height="75.6"/>
+      <PictureObject Name="Picture8" Left="529.2" Top="113.4" Width="510.3" Height="75.6"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter2" Top="401.45" Width="1047.06" Height="85.05"/>
+  </ReportPage>
+</Report>

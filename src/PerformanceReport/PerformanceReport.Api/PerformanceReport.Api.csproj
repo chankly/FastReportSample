@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>c53c97f7-f58a-4086-9235-e8bb3b1e115d</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Reporting\MediacoachLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FastReport.OpenSource.Export.PdfSimple" Version="2026.1.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PerformanceReport.Models\PerformanceReport.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\Reporting\MediacoachLogo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Reports\TeamPostMatch.frx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Reporting\3a1b1b34-3ac5-9932-31de-984c924b9d7b.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Reports\Strategies\" />
+  </ItemGroup>
+
+</Project>

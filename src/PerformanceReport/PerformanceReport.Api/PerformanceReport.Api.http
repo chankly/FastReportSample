@@ -1,0 +1,6 @@
+@PerformanceReport.Api_HostAddress = http://localhost:5220
+
+GET {{PerformanceReport.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
